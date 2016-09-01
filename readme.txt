@@ -1,15 +1,15 @@
 ﻿=== Contact Form 7 - Elavon Converge ===
 
-Contributors: zealopensource
+Contributors: zealopensource & pers0n on github.com
 Tags: accept credit card payment, Additional Settings, CF7 elavon, contact form, contact form 7,Contact Form 7 + elavon, contact form 7 sagepay, contact form 7 to paypal redirect, contact forms, Contact Forms 7, contacted, contactform7, contacts, donation on WordPress site, form, forms, integrate elavon button, integrate elavon with contact form 7, integrate elavon with contact form 7, integrate elavon, online payment, pay online, payment using credit card, payments on WordPress site, elavon button, elavon donation, elavon Payment Gateway, elavon plugin for wordpress, Elavon submit, elavon, elavon API, elavon checkout, elavon donation, elavon integration in Contact Form 7, elavon payment, elavon payment gateway, elavon plugin for wordpress, super elavon, wp elavon
 Donate link: http://www.zealousweb.net/payment/
 Requires at least: 3.0.1
 Tested up to: 4.3.x
-Stable tag: 1.0
+Stable tag: 1.01
 License: GPLv3 or later License
 CF7 requires at least: 3.0
 CF7 tested up to: 4.3
-Version: 1.0
+Version: 1.01
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Contact Form 7 - Integrate elavon payment gateway for making your payments through Contact Form 7. 
