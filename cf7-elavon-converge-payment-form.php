@@ -1,6 +1,6 @@
 <?php
 /* @access      public
- * @since       1.0 
+ * @since       1.01
  * @return      $content
 */
 if ( ! defined( 'ABSPATH' ) ) { 
@@ -21,7 +21,7 @@ add_filter('wp_head', 'wpcf7_add_elavon_script', 10, 2);
 function wpcf7_add_elavon_script(){	
 
 ?>
-	<script type="text/javascript" src="https://js.elavon.com/v2/"></script>
+
 	<script type="text/javascript">   
 		jQuery(document).ready(function() {
 			jQuery('.wpcf7').each(function(index, element){	
@@ -207,7 +207,7 @@ function wpcf7_elavon_payment_gateway_form() {
 								jQuery('#elavon-payment-form input[name="cvv_number"]').removeAttr('disabled');
 
     						}else{
-    							if((data.tag == 'SSL_RESULT_MESSAGE') && (data.value == 'APPROVED')){
+    							if((data.tag == 'SSL_RESULT_MESSAGE') && (data.value == 'APPROVED' || data.value == 'APPROVAL')){//fixed
     								
     								var success_messasge = '<?php echo $messasge_field; ?>';
 									jQuery('.elavon-response-error').hide();
@@ -581,7 +581,7 @@ function wpcf7_elavon_seralize_data_form(){
 	}
 	 $ip = (isset($_SERVER['X_FORWARDED_FOR'])) ? $_SERVER['X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
 
-	$ssl_test_mode = 'true';
+	$ssl_test_mode = 'false';//this must be false for real transactions to work, otherwise set it to true. TODO: make this a nicer option
 	$ssl_cvv2cvc2_indicator = '1';
 
 	$xmlreq = '<txn>
