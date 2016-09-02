@@ -1,6 +1,6 @@
 <?php
 /* @access      public
- * @since       1.01
+ * @since       1.1
  * @return      $content
 */
 if ( ! defined( 'ABSPATH' ) ) { 
@@ -115,7 +115,7 @@ function wpcf7_elavon_payment_gateway_form() {
 
 		if(isset($amount_field) && !empty($amount_field)){
 			$amount = $formdata[$amount_field];
-		}		
+		}
 		
 		// Add code 20/05/2016 
 		if(isset($url_field) && !empty($url_field)){
@@ -208,6 +208,7 @@ function wpcf7_elavon_payment_gateway_form() {
 
     						}else{
     							if((data.tag == 'SSL_RESULT_MESSAGE') && (data.value == 'APPROVED' || data.value == 'APPROVAL')){//fixed
+    							//if(data.tag == 'SSL_RESULT_MESSAGE') {//fixed
     								
     								var success_messasge = '<?php echo $messasge_field; ?>';
 									jQuery('.elavon-response-error').hide();
@@ -311,6 +312,7 @@ function wpcf7_elavon_payment_gateway_form() {
 				<?php } ?>
 				<?php if(isset($zip_code) && !empty($zip_code)){?>
 					<input type="hidden" name="zip_code" value="<?php echo $zip_code;?>">
+
 				<?php }else{ ?>
 					<input type="hidden" name="zip_code" value="78003">
 				<?php } ?>
@@ -340,7 +342,6 @@ add_action( 'wp_ajax_elavon_sendEmailToUser', 'wpcf7_get_elavon_sendEmailToUser'
 add_action( 'wp_ajax_nopriv_elavon_sendEmailToUser', 'wpcf7_get_elavon_sendEmailToUser' );
 
 function wpcf7_get_elavon_sendEmailToUser(){
-	
 	foreach($_POST['paymentdetails'] as $data){
 		$payment_details[$data['tag']] = $data['value'];
 	}
@@ -444,7 +445,7 @@ function senmaildetails($email,$payment_details,$fields){
 		$headers[] = 'From : '.$sender;
 	
 		if(isset($recipient) && !empty($recipient)){
-			wp_mail( $recipient, $emailsubject, $emailcontent, $headers, $attachments );
+			wp_mail( $recipient, $emailsubject, $emailcontent, $headers ); // removed attachment parameter from here
 		}
 }
 

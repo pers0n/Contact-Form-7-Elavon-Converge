@@ -1,17 +1,16 @@
 <?php
 /**
- * Plugin Name: Contact Form 7 - Elavon Converge
- * Plugin URL: http://wordpress.org/plugins/contact-form-7-Elavon-converge-payment-gateway
- * Description:  This plugin will integrate elavon payment gateway for making your payments through Contact Form 7.
- * Version: 1.0
- * Author: ZealousWeb Technologies
- * Author URI: http://zealousweb.com
- * Developer: The Zealousweb Team
- * Developer E-Mail: info@opensource.zealousweb.com
+ * Plugin Name: Evalon Converge Payment CF7 Form
+ * Plugin URL: 
+ * Description:  This plugin will integrate Elavon Converge payment gateway for making your payments through Contact Form 7. It is a modified fork of the "Contact Form 7 - Elavon Converge" plugin by ZealousWeb Technologies.
+ * Version: 1.1
+ * Author: Anonymous
+ * Author URI: 
+ * Developer: Anonymous
  * Text Domain: contact-form-7-extension
  * Domain Path: /languages
  * 
- * Copyright: © 2009-2015 ZealousWeb Technologies.
+ * Copyright: Forked from the GPLv3 WordPress plugin "Contact Form 7 - Elavon Converge" © 2009-2015 ZealousWeb Technologies.
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
